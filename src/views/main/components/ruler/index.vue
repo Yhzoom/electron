@@ -12,6 +12,7 @@
     background-color: #333;
     width: 25px;
     height: 25px;
+    z-index: 2;
   }
   #rulerX {
     position: absolute;

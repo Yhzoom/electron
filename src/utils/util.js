@@ -6,8 +6,21 @@
  * @Description: util
  * @FilePath: /editor/src/views/editor/utils/util.js
  */
-import moment from 'moment';
+// import moment from 'moment';
 
+/**
+ * @description: 防抖
+ */
+export function debounce (fn, wait){
+  let timer = null;
+
+  return function (...args) {
+    if (timer)clearInterval(timer);
+    timer = setTimeout(() => {
+      fn.apply(this, args);
+    }, wait);
+  };
+}
 /**
  * @description: 深拷贝
  * @return {*}
@@ -60,12 +73,15 @@ export const sortTransform = () =>
 
 export const stringToMoment = (str) =>
 {
-  return moment(str);
+  return str
+  // return moment(str);
 };
 
 export const momentToString = (m, type = 'YYYY-MM-DD hh:mm:ss') =>
 {
-  return moment(m).format(type);
+ 
+  return m
+  // return moment(m).format(type);
 };
 
 /**

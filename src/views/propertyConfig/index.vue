@@ -73,9 +73,9 @@ import { ref, computed } from 'vue';
 // //  标题
 // import headTitle from '../components/rightConfig/headTitle';
 // 数据源
-import editMode from '../storage/constant/editMode';
-import { staticStorage } from '../storage/staticStorage';
-import { storage } from '../storage/storage';
+import editMode from '@/storage/constant/editMode';
+import { staticStorage } from '@/storage/staticStorage';
+import { storage } from '@/storage/storage';
 
 const isClose = ref(true);
 
@@ -87,6 +87,7 @@ const isClose = ref(true);
   top: 50px;
   left: calc(100% - 200px);
   width: 180px;
+  z-index: 10;
   .ant-form-item {
     margin: 0;
     margin-top: 5px;

@@ -33,7 +33,7 @@ export const useReactiveStorage = defineStore('storage', {
       // 地图模式缩放
       currentMapZoom: 100,
       // 编辑模式:底部导航bottomNav; 侧边导航siderNav; 页面page; 弹窗window, 默认第一个底部导航
-      currentEditMode: editMode.bottomNav, // null
+      currentEditMode: editMode.page, // null
       // 当前编辑的页面Code
       currentEditPageCode: null,
       // 当前编辑的弹窗Code

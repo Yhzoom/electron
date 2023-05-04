@@ -2,7 +2,7 @@
  * @Author       : haungyh
  * @Date         : 2023-03-04 17:25:39
  * @LastEditors  : huangyh
- * @LastEditTime : 2023-03-06 20:02:43
+ * @LastEditTime : 2023-04-24 19:53:26
  * @Description  : 
  * @FilePath     : /electron/src/App.vue
 -->
@@ -11,11 +11,11 @@
       <div class="loadingMask" v-if="storage.showLoading">
         <img src="@/assets/loading.gif" class="loading-img" />
       </div>
-      <editor-header />
+      <editorHeader />
       <section class="editor-container">
         <leftSider />
         <editorMain />
-        <rightConfig />
+        <propertyConfig />
       </section>
     <!-- 点击发布时弹窗 -->
     <!-- <publiseModal /> -->
@@ -33,10 +33,10 @@ import {
 } from 'vue';
 
 // 页面布局
-import editorHeader from './layout/editor-header.vue';
-import leftSider from './layout/leftSider.vue';
-import editorMain from './layout/editor-main.vue';
-import rightConfig from './layout/rightConfig.vue';
+import editorHeader from './views/header/index.vue';
+import leftSider from './views/leftSider/index.vue';
+import editorMain from './views/main/index.vue';
+import propertyConfig from './views/propertyConfig/index.vue';
 // 弹窗
 // import publiseModal from './components/modal/publiseModal';
 // window 事件

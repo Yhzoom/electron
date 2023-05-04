@@ -65,6 +65,15 @@
       </el-tab-pane>
       <el-tab-pane >
         <template #label>
+          <span class="sider-tabs-label" @click="showDesignHandler">
+            <i class="icon icon-page"></i>
+            <span>UI规范</span>
+          </span>
+        </template>
+        User
+      </el-tab-pane>
+      <el-tab-pane >
+        <template #label>
           <span class="sider-tabs-label">
             <i class="icon icon-data"></i>
             <span>数据源</span>
@@ -93,12 +102,30 @@
     </el-tooltip>
       </li>
     </ul>
+    <design v-model:show="showDesign" />
   </aside>
 </template>
-
+<!-- <div>
+  <span class="sider-tabs-label" @click="showDesignHandler">
+    <i class="icon icon-page"></i>
+    <span>UI规范</span>
+  </span>
+  <span class="sider-tabs-label">
+    <i class="icon icon-data"></i>
+    <span>数据源</span>
+  </span>
+</div> -->
 <script setup>
-// import contentTabPanel from '@/views/editor/components/leftSider/contentTabPanel';
+import { ref } from "vue";
+import design from './components/design/index.vue';
 // import materialTabPanel from '@/views/editor/components/leftSider/materialTabPanel';
+
+// UI规范
+const showDesign = ref(false)
+function showDesignHandler(evt) {
+  evt.stopPropagation();
+  showDesign.value = true
+}
 </script>
 
 <style lang="scss">

@@ -97,12 +97,12 @@
 <script setup>
 import { ref } from 'vue';
 // 页面模式/编辑器下拉选项
-import pageMode from '../storage/constant/pageMode';
-import editorSizeList from '../storage/constant/editorSizeList';
+import pageMode from '@/storage/constant/pageMode';
+import editorSizeList from '@/storage/constant/editorSizeList';
 // 数据源
-import { storage } from '../storage/storage';
-import { editorStorage } from '../storage/editorStorage';
-import { staticStorage } from '../storage/staticStorage';
+import { storage } from '@/storage/storage';
+import { editorStorage } from '@/storage/editorStorage';
+import { staticStorage } from '@/storage/staticStorage';
 // control 保存，发布，预览
 // import { save, publish } from '../controller/saveAndPubliseController';
 // 编辑风格名称
