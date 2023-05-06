@@ -2,11 +2,11 @@
  * @Author       : haungyh
  * @Date         : 2023-04-25 22:31:30
  * @LastEditors  : huangyh
- * @LastEditTime : 2023-05-04 15:03:34
+ * @LastEditTime : 2023-05-06 09:45:06
  * @Description  : 
- * @FilePath     : /electron/src/storage/constant/ui/color.js
+ * @FilePath     : /electron/src/config/ui/color.js
  */
-const ColorBase = [{
+export const ColorBase = [{
   value: '#000',
   code: '--van-black',
   name: '黑',
@@ -94,19 +94,19 @@ const ColorBase = [{
 ]
 
 // 主色调
-const primaryColor = {
+export const PrimaryColor = {
     value: 'var(--van-blue)',
     code: '--van-primary-color',
     name: '主色调'
   }
 // 辅助色
-const AssistColor = {
-    value: 'var(--van-blue)',
+export const SubColor = {
+    value: 'var(--van-orange-dark)',
     code: '--van-assist-color',
     name: '辅助色（用于强调、标签等位置）'
   }
 // 功能色
-const FunctionalColor = [{
+export const FunctionalColor = [{
     value: 'var(--van-green)',
     code: '--van-success-color',
     name: '成功/正常状态'
@@ -129,7 +129,7 @@ const FunctionalColor = [{
   }
 ]
 
-const BackgroundColor = [{
+export const BackgroundColor = [{
     value: 'linear-gradient(to right, #ff6034, #ee0a24)',
     code: '--van-gradient-red',
     name: '渐变色红'
@@ -151,28 +151,28 @@ const BackgroundColor = [{
     name: '白色背景'
   }]
 
-  const LinkColor = [
+  export const LinkColor = [
     {
     value: '#576b95',
     code: '--van-link-color',
     name: '链接颜色'
   }
   ]
-  const ActiveColor = [
+  export const ActiveColor = [
     {
     value: 'var(--van-gray-2)',
     code: '--van-active-color',
     name: '点击过的链接颜色'
   }
   ]
-  const ActiveOpacity = [
+  export const ActiveOpacity = [
     {
     value: '0.6',
     code: '--van-active-opacity',
     name: '点击过的链接颜色透明度'
   }
   ]
-  const DisabledOpacity = [
+  export const DisabledOpacity = [
     {
     value: '0.5',
     code: '--van-disabled-opacity',
@@ -180,7 +180,7 @@ const BackgroundColor = [{
   }
   ]
 // 内外边距
-  const Padding = [
+  export const Padding = [
     {
     value: '4px',
     code: '--van-padding-base',
@@ -209,7 +209,7 @@ const BackgroundColor = [{
   ]
 
   // 字体
-const TextFont = [
+export const TextFont = [
   {
   value: '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Segoe UI, Arial, Roboto, "PingFang SC", "miui", "Hiragino Sans GB", "Microsoft Yahei", sans-serif',
   code: '--van-base-font',
@@ -223,7 +223,7 @@ const TextFont = [
 ]
 
 // 文字颜色
-const TextColor = [
+export const TextColor = [
   {
     value: 'var(--van-gray-8)',
     code: '--van-text-color',
@@ -251,7 +251,7 @@ const TextColor = [
   }
 ]
 // 字体大小
-const FontSize = [
+export const FontSize = [
   {
   value: '10px',
   code: '--van-font-size-xs',
@@ -275,7 +275,7 @@ const FontSize = [
 }
 ]
 // 行高
-const LineHeight = [
+export const LineHeight = [
   {
   value: '14px',
   code: '--van-line-height-xs',
@@ -301,21 +301,21 @@ const LineHeight = [
 
 
 // 边框
-const BorderWidth = [
+export const BorderWidth = [
   {
   value: '1px',
   code: '--van-border-width',
   name: '边框线'
 }
 ]
-const BorderColor = [
+export const BorderColor = [
   {
   value: '1px',
   code: '--van-border-color',
   name: '边框线'
 }
 ]
-const BorderRadius = [
+export const BorderRadius = [
  {
   value: '2px',
   code: '--van-radius-sm',
