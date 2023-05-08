@@ -124,3 +124,24 @@ export const sortValueTransform = (str) =>
 {
   return str;
 };
+
+
+/**
+ * @description: class 实现单例
+ * @param {*} str
+ * @return {*}
+ */
+export function singleton (classInstance)
+{
+  let instance
+  return new Proxy(classInstance, {
+    construct( target, args )
+    {
+      if(!instance)
+      {
+        instance = new target(...args);
+      }
+      return instance
+    }
+  })
+};

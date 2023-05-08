@@ -11,6 +11,7 @@
     "element-plus": "^2.2.33",
     "pinia": "^2.0.32",
     "v-drag": "^3.0.9",
+    "vant": "^4.3.1",
     "vue": "^3.2.45",
     "vuedraggable": "^2.24.3"
   },
@@ -19,7 +20,6 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "electron": "^23.1.2",
     "sass": "^1.58.3",
-    "sass-loader": "^13.2.0",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
     "vite-plugin-electron": "^0.11.1",

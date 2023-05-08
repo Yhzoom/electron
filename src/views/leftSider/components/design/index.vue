@@ -2,7 +2,7 @@
  * @Author       : haungyh
  * @Date         : 2023-04-25 10:26:00
  * @LastEditors  : huangyh
- * @LastEditTime : 2023-04-25 23:29:20
+ * @LastEditTime : 2023-05-08 10:49:02
  * @Description  : UI规范配置
  * @FilePath     : /electron/src/views/leftSider/components/design/index.vue
 -->
@@ -15,15 +15,15 @@
     <div class="">
       <el-row>
         <el-col :span='12'>
-          <div class="card">
-            <div class="color"></div>
-            <div class="card-foot">主色</div>
+          <div class="card main-color">
+            <div class="color" :style="{ backgroundColor: uiStorage.primaryColor.value }"></div>
+            <div class="card-foot">{{ uiStorage.primaryColor.name }}</div>
           </div>
         </el-col>
         <el-col :span='12'>
-          <div class="card">
-            <div class="color"></div>
-            <div class="card-foot">辅助色（用于强调、标签等位置）</div>
+          <div class="card main-color">
+            <div class="color" :style="{ backgroundColor: uiStorage.subColor.value }"></div>
+            <div class="card-foot">{{ uiStorage.subColor.name }}</div>
           </div>
         </el-col>
       </el-row>
@@ -38,22 +38,15 @@
 </template>
 <script setup>
   import { ref } from "vue";
+  import { uiStorage } from "@/storage/uiStorage/index";
+  console.log(uiStorage);
   defineProps({
     show: {
       type: Boolean,
       default: false
     }
   })
-  const color = {
-    main: {
-      color: '#3E7BF0',
-      label: '主色'
-    },
-    main: {
-      color: '#3E7BF0',
-      label: '主色'
-    }
-  }
+  
   const emit = defineEmits(['update:show'])
   // const show = ref(true)
   
@@ -65,6 +58,11 @@
   }
   
 </script>
-<style lang="">
-  
+<style lang="scss" scoped>
+  .main-color {
+    .color {
+      height: 100px;
+      border-radius: 8px;
+    }
+  }
 </style>
